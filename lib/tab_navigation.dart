@@ -10,7 +10,7 @@ class TabNavigation extends StatefulWidget {
 }
 
 class _TabNavigationState extends State<TabNavigation> {
-  late DateTime lastTime;
+    DateTime lastTime;
   Widget _currentBody = Container(color: Colors.blue);
   int _cuttentIndex = 0;
 
@@ -37,7 +37,7 @@ class _TabNavigationState extends State<TabNavigation> {
         _currentBody = Container(color: Colors.blue);
         break;
       case 1:
-        _currentBody = Container(color: Colors.white);
+        _currentBody = Container(color: Colors.yellow);
         break;
       case 2:
         _currentBody = Container(color: Colors.red);
