@@ -13,7 +13,7 @@ class Url {
   };
 
   // home
-  static String feedUrl = '${baseUrl}v2/feed?num=1';
+  static String feedUrl = '${baseUrl}';
   static String keywordUrl = '${baseUrl}v3/queries/hot';
   static String searchUrl = "${baseUrl}v1/search?query=";
 

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zdh/config/string.dart';
+import 'package:flutter_zdh/page/home/home_page.dart';
 import 'package:flutter_zdh/utils/ToastUtils.dart';
 import 'package:flutter_zdh/viewmodel/tab_navigation_viewmodel.dart';
 import 'package:flutter_zdh/widget/provider_widget.dart';
@@ -26,7 +27,7 @@ class _TabNavigationState extends State<TabNavigation> {
             controller: _pageController,
             physics: NeverScrollableScrollPhysics(), //禁止viewpager滑动
             children: [
-              Container(color: Colors.yellow),
+              HomePage(),
               Container(color: Colors.brown),
               Container(color: Colors.green),
               Container(color: Colors.amber),
