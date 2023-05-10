@@ -38,6 +38,14 @@ dependencies:
   flutter_splash_screen: ^1.0.0+6
   fluttertoast: ^8.0.7
   http: ^0.13.6
+  # 4.InheritedWidget的包装器 ，使它们更易于使用和更可重用。
+  provider: ^5.0.0
+  # 5.State Manager、Navigation Manager
+  get: 4.2.4
+  # 6.banner左右滑动需要
+  flutter_swiper: ^1.1.6
+  # 7.图片扩展库
+  extended_image: ^4.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,8 +1,9 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zdh/config/string.dart';
 import 'package:flutter_zdh/utils/ToastUtils.dart';
+import 'package:flutter_zdh/viewmodel/tab_navigation_viewmodel.dart';
+import 'package:flutter_zdh/widget/provider_widget.dart';
 
 class TabNavigation extends StatefulWidget {
   @override
@@ -10,23 +11,45 @@ class TabNavigation extends StatefulWidget {
 }
 
 class _TabNavigationState extends State<TabNavigation> {
-    DateTime lastTime;
+  DateTime lastTime;
   Widget _currentBody = Container(color: Colors.blue);
-  int _cuttentIndex = 0;
+  int _currentIndex = 0;
+
+  PageController _pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-        onWillPop: _onWillPop,
+        onWillPop: _onWillPop, //防用户误触 两次退出页面
         child: Scaffold(
-          body: _currentBody,
-          bottomNavigationBar: BottomNavigationBar(
-            currentIndex: _cuttentIndex,
-            selectedItemColor: Color(0xff000000),
-            unselectedItemColor: Color(0xff9a9a9a),
-            type: BottomNavigationBarType.fixed,//字体固定
-            items: _item(),
-            onTap: _onTap,
+          body: PageView(
+            controller: _pageController,
+            physics: NeverScrollableScrollPhysics(), //禁止viewpager滑动
+            children: [
+              Container(color: Colors.yellow),
+              Container(color: Colors.brown),
+              Container(color: Colors.green),
+              Container(color: Colors.amber),
+            ],
+          ),
+          bottomNavigationBar: ProviderWidget<TabNavigationViewModel>(
+            model: TabNavigationViewModel(),
+            builder: (context, model, child) {
+              return BottomNavigationBar(
+                currentIndex: model.currentIndex,
+                selectedItemColor: Color(0xff000000),
+                unselectedItemColor: Color(0xff9a9a9a),
+                type: BottomNavigationBarType.fixed,
+                //字体固定
+                items: _item(),
+                onTap: (index) {
+                  if (model.currentIndex != index) {
+                    _pageController.jumpToPage(index);
+                    model.changeBottomTabIndex(index);
+                  }
+                }, //点击事件
+              );
+            },
           ),
         ));
   }
@@ -47,7 +70,7 @@ class _TabNavigationState extends State<TabNavigation> {
         break;
     }
     setState(() {
-      _cuttentIndex = index;
+      _currentIndex = index;
     });
   }
 

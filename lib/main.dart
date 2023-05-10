@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AppInit.init();
     //异步ui更新
     return FutureBuilder(
       future: AppInit.init(),

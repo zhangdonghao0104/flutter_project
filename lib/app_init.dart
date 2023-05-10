@@ -5,8 +5,8 @@ class AppInit {
   AppInit._();
 
   static Future<void> init() async {
-    Url.baseUrl = "http://www.wanandroid.com/banner/json";
-    Future.delayed(Duration(microseconds: 4000), () {
+    Url.baseUrl = 'http://www.wanandroid.com/banner/json';
+    Future.delayed(Duration(milliseconds: 2000), () {
       FlutterSplashScreen.hide();
     });
   }
