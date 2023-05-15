@@ -32,16 +32,7 @@ class HttpManager {
       final dio = Dio();
 
 
-      var response = await http.get(Uri.parse(url), headers: {
-        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
-        'Authority':'baobab.kaiyanapp.com',
-        'Accept': 'application/json, text/plain, */*',
-        'Accept-Encoding': 'gzip, deflate, br',
-        'Accept-Language': 'zh-CN,zh;q=0.9',
-        'Connection': 'keep-alive',
-        'Content-Type': 'application/json',
-      });
-      // dio.options.headers = {
+      // var response = await http.get(Uri.parse(url), headers: {
       //   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
       //   'Authority':'baobab.kaiyanapp.com',
       //   'Accept': 'application/json, text/plain, */*',
@@ -49,10 +40,20 @@ class HttpManager {
       //   'Accept-Language': 'zh-CN,zh;q=0.9',
       //   'Connection': 'keep-alive',
       //   'Content-Type': 'application/json',
-      // };
-      // final response = await dio.get(url);
+      // });
+      dio.options.headers = {
+        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+        'Authority':'baobab.kaiyanapp.com',
+        'Accept': 'application/json, text/plain, */*',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Accept-Language': 'zh-CN,zh;q=0.9',
+        'Connection': 'keep-alive',
+        'Content-Type': 'application/json',
+      };
+      final response = await dio.get(url);
       if(response.statusCode == 200){
-        var result = json.decode(utf8decoder.convert(response.bodyBytes));
+        var result = response.data;
+       // var decode = json.decode(utf8decoder.convert(response.bodyBytes));
         print(result);
         success(result);
 
