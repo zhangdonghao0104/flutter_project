@@ -25,7 +25,7 @@ class BannerWidget extends StatelessWidget {
                 image: DecorationImage(
                   // 网络获取图片
                   image: cachedNetworkImageProvider(
-                      model.bannerList[index].imagePath),
+                      model.bannerList[index].data.cover.feed),
                   // 图片显示样式,类似Android缩放设置
                   fit: BoxFit.cover,
                 ),
@@ -42,7 +42,7 @@ class BannerWidget extends StatelessWidget {
                 // decoration:装饰,设置子控件的背景颜色、形状等
                 decoration: BoxDecoration(color: Colors.black12),
                 child: Text(
-                  model.bannerList[index].desc,
+                  model.bannerList[index].data.title,
                   style: TextStyle(color: Colors.white, fontSize: 12),
                 ),
               ),

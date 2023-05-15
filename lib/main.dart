@@ -25,7 +25,10 @@ class MyApp extends StatelessWidget {
     return FutureBuilder(
       future: AppInit.init(),
       builder: (context, snapshot) {
+
+
         print(snapshot.connectionState);
+
         var widget = snapshot.connectionState == ConnectionState.done
             ? TabNavigation()
             : Scaffold(
@@ -57,12 +60,5 @@ class _GetMaterialAppWidgetState extends State<GetMaterialAppWidget> {
       initialRoute: '/',
       getPages: [GetPage(name: '/', page: () => widget.child)],
     );
-    // return MaterialApp(
-    //   title: 'EyePetizer',
-    //   initialRoute: '/',
-    //   routes: {
-    //     '/': (BuildContext context) => widget.child,
-    //   },
-    // );
   }
 }
