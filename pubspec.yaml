@@ -38,6 +38,7 @@ dependencies:
   flutter_splash_screen: ^1.0.0+6
   fluttertoast: ^8.0.7
   http: ^0.13.6
+  dio: ^4.0.0
   # 4.InheritedWidget的包装器 ，使它们更易于使用和更可重用。
   provider: ^5.0.0
   # 5.State Manager、Navigation Manager
@@ -46,6 +47,17 @@ dependencies:
   flutter_swiper: ^1.1.6
   # 7.图片扩展库
   extended_image: ^4.1.0
+
+  # 8.下拉刷新和上拉加载的库
+  pull_to_refresh: ^2.0.0
+  # 9.依赖于Dart常用工具类库common_utils，以及对其他第三方库封装
+  flustars: ^2.0.1
+  # 10.分享
+  share_plus: ^2.1.4
+  # 11.视频播放库
+  video_player: ^2.1.12
+  # 12.对 video_player库 进行了一层封装，便于上层使用
+  chewie: ^1.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

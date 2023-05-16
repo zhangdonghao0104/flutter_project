@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_zdh/app_init.dart';
 import 'package:flutter_zdh/http/http_manager.dart';
+import 'package:flutter_zdh/page/video/video_detail_pager.dart';
 import 'package:flutter_zdh/tab_navigation.dart';
 import 'package:get/get.dart';
 
@@ -25,8 +26,6 @@ class MyApp extends StatelessWidget {
     return FutureBuilder(
       future: AppInit.init(),
       builder: (context, snapshot) {
-
-
         print(snapshot.connectionState);
 
         var widget = snapshot.connectionState == ConnectionState.done
@@ -58,7 +57,11 @@ class _GetMaterialAppWidgetState extends State<GetMaterialAppWidget> {
     return GetMaterialApp(
       title: 'EyePetizer',
       initialRoute: '/',
-      getPages: [GetPage(name: '/', page: () => widget.child)],
+      getPages: [
+        GetPage(name: '/', page: () => widget.child),
+        GetPage(name: '/detail', page: () => VideoDetailPage()),
+
+      ],
     );
   }
 }
