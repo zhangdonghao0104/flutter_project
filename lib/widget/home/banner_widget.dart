@@ -3,7 +3,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_zdh/utils/cache_image.dart';
 import 'package:flutter_zdh/utils/navigation_utils.dart';
 
-import '../../viewmodel/home_page_viewmodel.dart';
+import '../../viewmodel/home/home_page_viewmodel.dart';
 
 class BannerWidget extends StatelessWidget {
   final HomePageViewModel model;

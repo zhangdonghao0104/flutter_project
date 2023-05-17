@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_zdh/config/string.dart';
 import 'package:flutter_zdh/model/common_item.dart';
 import 'package:flutter_zdh/state/base_list_state.dart';
-import 'package:flutter_zdh/viewmodel/home_page_viewmodel.dart';
+import 'package:flutter_zdh/viewmodel/home/home_page_viewmodel.dart';
 import 'package:flutter_zdh/widget/app_bar.dart';
 import 'package:flutter_zdh/widget/home/banner_widget.dart';
 import 'package:flutter_zdh/widget/list_item_widget.dart';

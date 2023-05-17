@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_zdh/model/common_item.dart';
 import 'package:flutter_zdh/utils/cache_image.dart';
 import 'package:flutter_zdh/utils/date_util.dart';
+import 'package:flutter_zdh/utils/navigation_utils.dart';
 import 'package:flutter_zdh/utils/share_util.dart';
 
 /*
@@ -34,6 +35,7 @@ class ListItemWidget extends StatelessWidget {
           onTap: () {
             print('点击了,跳转详情页');
             // TODO:跳转详情页
+            toNamed('/detail', item.data);
           },
           child: Padding(
             padding: EdgeInsets.fromLTRB(15, 10, 15, 10),

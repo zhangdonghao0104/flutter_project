@@ -58,6 +58,10 @@ dependencies:
   video_player: ^2.1.12
   # 12.对 video_player库 进行了一层封装，便于上层使用
   chewie: ^1.0.0
+    # 13.常见动画库
+  animations: ^2.0.1
+    # 14.允许展开和折叠文本
+  readmore: ^2.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

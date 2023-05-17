@@ -22,10 +22,9 @@ class _HomePageState extends State<HomePage>
       appBar: appBar(
         StringUtils.home,
         showBack: false,
+        backgroundColor: Colors.green
       ),
       body: HomeBodyPage()
-      // Container(color: Colors.blue,)
-      ,
     );
   }
 }

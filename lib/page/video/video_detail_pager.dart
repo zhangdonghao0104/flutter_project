@@ -7,7 +7,7 @@ import 'package:flutter_zdh/page/video/video_play_widget.dart';
 import 'package:flutter_zdh/utils/cache_image.dart';
 import 'package:flutter_zdh/utils/date_util.dart';
 import 'package:flutter_zdh/utils/navigation_utils.dart';
-import 'package:flutter_zdh/viewmodel/video_detail_viewmodel.dart';
+import 'package:flutter_zdh/viewmodel/video/video_detail_viewmodel.dart';
 import 'package:flutter_zdh/widget/loading_state_widget.dart';
 import 'package:flutter_zdh/widget/provider_widget.dart';
 
