@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zdh/config/string.dart';
+import 'package:flutter_zdh/page/discovery/TopicPage.dart';
 import 'package:flutter_zdh/page/discovery/category_page.dart';
 import 'package:flutter_zdh/page/discovery/follow_page.dart';
 import 'package:flutter_zdh/widget/app_bar.dart';
@@ -43,7 +44,7 @@ class _DiscoveryPageState extends State<DiscoveryPage>
         children: <Widget>[
           FollowPage(),
           CategoryPage(),
-          Container(color: Colors.yellow),
+          TopicPage(),
           Container(color: Colors.brown),
           Container(color: Colors.grey),
         ],
