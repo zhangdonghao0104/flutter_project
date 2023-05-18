@@ -14,7 +14,12 @@ void main() {
   if (Platform.isAndroid) {
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    // SystemChrome.setSystemUIOverlayStyle(
+    //     SystemUiOverlayStyle(
+    //       statusBarColor: Colors.transparent, // 设置状态栏为透明色
+    //     ));
   }
+
 }
 
 class MyApp extends StatelessWidget {

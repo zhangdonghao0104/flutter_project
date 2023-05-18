@@ -1,4 +1,5 @@
 //通用分页State封装
+
 import 'package:flutter/material.dart';
 import 'package:flutter_zdh/model/paging_model.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -8,17 +9,22 @@ import '../widget/loading_state_widget.dart';
 import '../widget/provider_widget.dart';
 
 /// State
-abstract class BaseListState<L, M extends BaseListViewModel<L, PagingModel<L>>,
-T extends StatefulWidget> extends State<T>
+abstract class BaseListState<L, M extends BaseListViewModel<L, PagingModel<L>>, T extends StatefulWidget> extends State<T>
     with AutomaticKeepAliveClientMixin {
 
   M get viewModel; //真实获取数据的仓库
 
   Widget getContentChild(M model); //真实的分页控件
 
+  bool enablePullDown = true;
+  bool enablePullUp = true;
+
+  void init(){}
+
   @override
   Widget build(BuildContext context) {
     super.build(context);
+    init();
     return ProviderWidget<M>(
         model: viewModel,
         onModelInit: (model) => model.refresh(),
@@ -32,7 +38,8 @@ T extends StatefulWidget> extends State<T>
                 controller: model.refreshController,
                 onRefresh: model.refresh,
                 onLoading: model.loadMore,
-                enablePullUp: true,
+                enablePullUp: enablePullUp,
+                enablePullDown: enablePullDown,
                 // 显示的界面
                 child: getContentChild(model),
               ),

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zdh/config/string.dart';
-import 'package:flutter_zdh/page/discovery/TopicPage.dart';
+import 'package:flutter_zdh/page/discovery/topic_page.dart';
 import 'package:flutter_zdh/page/discovery/category_page.dart';
 import 'package:flutter_zdh/page/discovery/follow_page.dart';
 import 'package:flutter_zdh/widget/app_bar.dart';
