@@ -62,6 +62,10 @@ dependencies:
   animations: ^2.0.1
     # 14.允许展开和折叠文本
   readmore: ^2.1.0
+
+  flutter_webview_plugin: 0.3.11
+  # 16.加载更多
+  loading_more_list: ^4.0.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

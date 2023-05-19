@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zdh/config/string.dart';
+import 'package:flutter_zdh/page/discovery/news_page.dart';
+import 'package:flutter_zdh/page/discovery/recommend_page.dart';
 import 'package:flutter_zdh/page/discovery/topic_page.dart';
 import 'package:flutter_zdh/page/discovery/category_page.dart';
 import 'package:flutter_zdh/page/discovery/follow_page.dart';
@@ -45,8 +47,8 @@ class _DiscoveryPageState extends State<DiscoveryPage>
           FollowPage(),
           CategoryPage(),
           TopicPage(),
-          Container(color: Colors.brown),
-          Container(color: Colors.grey),
+          NewsPage(),
+          RecommendPage(),
         ],
       ),
     );

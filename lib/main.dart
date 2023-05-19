@@ -14,10 +14,6 @@ void main() {
   if (Platform.isAndroid) {
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Colors.transparent));
-    // SystemChrome.setSystemUIOverlayStyle(
-    //     SystemUiOverlayStyle(
-    //       statusBarColor: Colors.transparent, // 设置状态栏为透明色
-    //     ));
   }
 
 }
@@ -27,6 +23,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     //异步ui更新
     return FutureBuilder(
       future: AppInit.init(),
@@ -60,6 +57,7 @@ class _GetMaterialAppWidgetState extends State<GetMaterialAppWidget> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'EyePetizer',
       initialRoute: '/',
       getPages: [
