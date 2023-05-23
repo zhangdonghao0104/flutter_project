@@ -6,6 +6,7 @@ import 'package:flutter_zdh/page/video/video_item_widget.dart';
 import 'package:flutter_zdh/page/video/video_play_widget.dart';
 import 'package:flutter_zdh/utils/cache_image.dart';
 import 'package:flutter_zdh/utils/date_util.dart';
+import 'package:flutter_zdh/utils/history_repository.dart';
 import 'package:flutter_zdh/utils/navigation_utils.dart';
 import 'package:flutter_zdh/viewmodel/video/video_detail_viewmodel.dart';
 import 'package:flutter_zdh/widget/loading_state_widget.dart';
@@ -37,6 +38,7 @@ class _VideoDetailPageState extends State<VideoDetailPage>
     data = widget.videoDta == null ? arguments() : widget.videoDta;
     //监听页面可见与不可见状态
     WidgetsBinding.instance.addObserver(this);
+    HistoryRepository.saveWatchHistory(data);
   }
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {

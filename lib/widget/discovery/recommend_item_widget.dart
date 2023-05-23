@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zdh/model/discovery/recommend_model.dart';
+import 'package:flutter_zdh/page/discovery/recommend_photo_page.dart';
 import 'package:flutter_zdh/utils/ToastUtils.dart';
 import 'package:flutter_zdh/utils/cache_image.dart';
 import 'package:flutter_zdh/utils/navigation_utils.dart';
+
+import '../../page/discovery/recommend_video_page.dart';
 
 const VIDEO_TYPE = 'video';
 
@@ -17,13 +20,13 @@ class RecommendItemWidget extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (item.data.content.type == VIDEO_TYPE) {
-          ToastUtils.showTip("跳转视频页面");
-          // toPage(RecommendVideoPage(item: item));
+          // ToastUtils.showTip("跳转视频页面");
+          toPage(RecommendVideoPage(item: item));
         } else {
           ToastUtils.showTip("跳转图片页面");
-          // toPage(RecommendPhotoPage(
-          //   galleryItems: item.data.content.data.urls,
-          // ));
+          toPage(RecommendPhotoPage(
+            galleryItems: item.data.content.data.urls,
+          ));
         }
       },
       child: Card(

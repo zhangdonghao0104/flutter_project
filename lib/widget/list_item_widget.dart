@@ -20,7 +20,7 @@ class ListItemWidget extends StatelessWidget {
   // 是否显示 分割线:true:默认不显示分割线
   final bool showDivider;
 
-  const ListItemWidget(
+  const  ListItemWidget(
       {Key key, this.item, this.showCategory = true, this.showDivider = true})
       : super(key: key);
 

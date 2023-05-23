@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_zdh/config/string.dart';
 import 'package:flutter_zdh/page/discovery/discovery_page.dart';
 import 'package:flutter_zdh/page/home/home_page.dart';
+import 'package:flutter_zdh/page/hot/hot_page.dart';
+import 'package:flutter_zdh/page/mine/mine_page.dart';
 import 'package:flutter_zdh/utils/ToastUtils.dart';
 import 'package:flutter_zdh/viewmodel/tab_navigation_viewmodel.dart';
 import 'package:flutter_zdh/widget/provider_widget.dart';
@@ -30,8 +32,8 @@ class _TabNavigationState extends State<TabNavigation> {
             children: [
               DiscoveryPage(),
               HomePage(),
-              Container(color: Colors.green),
-              Container(color: Colors.amber),
+              HotPage(),
+              MinePage(),
             ],
           ),
           bottomNavigationBar: ProviderWidget<TabNavigationViewModel>(

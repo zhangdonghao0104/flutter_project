@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 * create time 2023/5/10 11:23
 * description:顶部导航栏
 */
-appBar(String title, {bool showBack = true, List<Widget> actions,PreferredSizeWidget bottom,Color backgroundColor,Container flexibleSpace}) {
+appBar(String title, {bool showBack = true, List<Widget> actions,PreferredSizeWidget bottom,Color backgroundColor,Container flexibleSpace,Color backBottomColor}) {
   return AppBar(
       //透明模式:light
       brightness: Brightness.light,
@@ -19,7 +19,7 @@ appBar(String title, {bool showBack = true, List<Widget> actions,PreferredSizeWi
       backgroundColor: backgroundColor,
       flexibleSpace: flexibleSpace,
       //导航栏最左侧widget:是否显示返回按钮
-      leading: showBack ? BackButton(color: Colors.blue) : null,
+      leading: showBack ? BackButton(color: backBottomColor) : null,
       //导航栏右侧list<widget>
       actions: actions,
       //title文字样式
