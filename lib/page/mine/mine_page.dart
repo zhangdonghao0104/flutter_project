@@ -34,9 +34,10 @@ class _MinePageState extends State<MinePage>
       _setting('我的消息'),
       _setting('我的记录'),
       _setting('我的缓存'),
-      _setting('我的消息',callback: (){
+      _setting('观看记录',callback: (){
         toPage(WatchHistoryPage());
       }),
+      _setting('意见反馈'),
     ];
   }
   Widget _setting(String text,{VoidCallback callback}){
